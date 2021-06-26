@@ -1,0 +1,141 @@
+body {
+  line-height: 1.2;
+}
+.showcase-container h1 {
+  font-size: 2rem;
+}
+.showcase-container p {
+  font-size: 1rem;
+}
+.btn {
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+
+}
+.sidebar .side-link{
+  display: none;
+}
+
+.menubar {
+  display: block;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+
+.menubar .toggler {
+  position: absolute;
+  top: 0;
+  right:0;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.menubar .hamburger {
+  position: absolute;
+  background: var(--primary-color);
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.menubar .hamburger > div {
+  position: relative;
+  background: var(--text-color);
+  width: 100%;
+  height: 2px;
+}
+
+.menubar .hamburger > div::before,.menubar .hamburger > div::after {
+  position: absolute;
+  content: '';
+  background: var(--text-color);
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+.menubar .hamburger > div::after {
+  top: -10px;
+}
+
+.menubar .toggler:checked + .hamburger > div {
+  transition: all 0.4s ease;
+  transform: rotate(135deg);
+}
+.menubar .toggler:checked + .hamburger > div::before,
+.menubar .toggler:checked + .hamburger > div::after {
+  top: 0;
+  transform: rotate(90deg);
+  transition: all 0.4s ease;
+}
+
+.menubar .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+  transition: all 0.4s ease;
+}
+.menubar .toggler:checked ~.menu > div  {
+  transform: scale(1);
+  transition-duration: 1s;
+  transition: all 1s ease;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.menu > div {
+  background: var(--secondary-color);
+  opacity: 0.9;
+  height: 350vw;
+  width: 350vw;
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+  z-index: -1;
+  border-radius: 50%;
+}
+.menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  transition: all 0.4s ease;
+  z-index: 2;
+}
+.menu > div > div li {
+  list-style: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.menu > div > div li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 1s ease-in-out;
+}
+.menu > div > div li a:hover {
+  color: var(--text-color);
+}
