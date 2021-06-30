@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beach World</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" media="screen and (max-width:768px)" href="css/mobile.css">
-</head>
-<body>
-  <header id="showcase">
-    <div class="showcase-container">
-    <h1>Welcome to Beach World</h1>
-    <p>A beach is a landform alongside a body of water which consists of loose particles. The particles composing a beach are typically made from rock, such as sand, gravel, shingle, pebbles, etc., or biological sources, such as mollusc shells or coralline algae. Sediments settle in different densities and structures, depending on the local wave action and weather, creating different textures, colors and gradients or layers of material.</p>
-    <a href="#" class="btn">Read More</a>
-  </div>
-  <div class="navbar">
-    <a href="#">
-      <img src="images/favicon.png" alt="beach">
-    </a>
-    <div class="sidebar">
-      <ul class="side-link">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">contact</a></li>
-      </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beach World</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:768px)"
+      href="css/mobile.css"
+    />
+  </head>
+  <body>
+    <header id="showcase">
+      <div class="showcase-container">
+        <h1>Welcome to Beach World</h1>
+        <p>
+          A beach is a landform alongside a body of water which consists of
+          loose particles. The particles composing a beach are typically made
+          from rock, such as sand, gravel, shingle, pebbles, etc., or biological
+          sources, such as mollusc shells or coralline algae. Sediments settle
+          in different densities and structures, depending on the local wave
+          action and weather, creating different textures, colors and gradients
+          or layers of material.
+        </p>
+        <a href="#" class="btn">Read More</a>
       </div>
-      <div class="menubar">
-        <input type="checkbox" class="toggler">
-        <div class="hamburger"><div></div></div>
-        <div class="menu">
-          <div>
-           <div>
-             <ul>
-              <li><a href="#" class="navlink">Home</a></li>
-              <li><a href="#" class="navlink">About</a></li>
-              <li><a href="#" class="navlink">Blog</a></li>
-              <li><a href="#" class="navlink">contact</a></li> 
-             </ul>
-           </div>
+      <div class="navbar">
+        <a href="#">
+          <img src="images/favicon.png" alt="beach" />
+        </a>
+        <div class="sidebar">
+          <ul class="side-link">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </div>
+        <div class="menubar">
+          <input type="checkbox" class="toggler" />
+          <div class="hamburger"><div></div></div>
+          <div class="menu">
+            <div>
+              <div>
+                <ul>
+                  <li><a href="#" class="navlink">Home</a></li>
+                  <li><a href="#" class="navlink">About</a></li>
+                  <li><a href="#" class="navlink">Blog</a></li>
+                  <li><a href="#" class="navlink">contact</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <script>
-    const navlink = document.getElementsByClassName('navlink')
-    for(let i=0; i<navlink.length; i++) {
-      navlink[i].addEventListener('click',clickHandler)
-    }
-    function clickHandler(e) {
-    e.preventDefault();
-    document.querySelector('.toggler').checked = false
-}
-  </script>
-</body>
+    </header>
+    <script>
+      const navlink = document.getElementsByClassName('navlink')
+      for (let i = 0; i < navlink.length; i++) {
+        navlink[i].addEventListener('click', clickHandler)
+      }
+      function clickHandler(e) {
+        e.preventDefault()
+        document.querySelector('.toggler').checked = false
+      }
+    </script>
+  </body>
 </html>
